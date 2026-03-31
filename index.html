@@ -7,7 +7,7 @@
 <title>Blue Berry's The Vintage Restaurant</title>
 
 <!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 * {
@@ -18,108 +18,110 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-}
-
-/* HERO SECTION */
-.hero {
-  height: 100vh;
-  background: url('https://images.unsplash.com/photo-1555992336-03a23c2a1f7f') no-repeat center/cover;
-  position: relative;
+  background: #0f0f0f;
   color: white;
-}
-
-.overlay {
-  background: rgba(0,0,0,0.6);
-  height: 100%;
-  padding: 20px;
 }
 
 /* NAVBAR */
 nav {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  padding: 20px 40px;
+  position: fixed;
+  width: 100%;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
 }
 
 .logo {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Cinzel', serif;
   font-size: 28px;
+  color: #ffcc70;
 }
 
 nav ul {
-  list-style: none;
   display: flex;
+  list-style: none;
 }
 
 nav ul li {
-  margin-left: 20px;
+  margin-left: 25px;
 }
 
 nav ul li a {
-  color: white;
   text-decoration: none;
+  color: white;
   transition: 0.3s;
 }
 
 nav ul li a:hover {
-  color: #ff4d4d;
+  color: #ffcc70;
 }
 
-/* HERO TEXT */
-.hero-content {
+/* HERO */
+.hero {
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1541542684-4a47d0e3b0b3') no-repeat center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  margin-top: 15%;
 }
 
-.hero-content h1 {
-  font-size: 50px;
-  font-family: 'Playfair Display', serif;
+.hero-content {
+  background: rgba(0,0,0,0.6);
+  padding: 40px;
+  border-radius: 15px;
 }
 
-.hero-content p {
+.hero h1 {
+  font-size: 55px;
+  font-family: 'Cinzel', serif;
+  color: #ffcc70;
+}
+
+.hero p {
   margin: 20px 0;
   font-size: 18px;
 }
 
 /* BUTTON */
 .btn {
-  background: #ff4d4d;
+  background: linear-gradient(45deg, #ff4d4d, #ffcc70);
   padding: 12px 25px;
-  border: none;
-  color: white;
-  cursor: pointer;
-  border-radius: 5px;
+  border-radius: 25px;
   text-decoration: none;
+  color: black;
+  font-weight: bold;
 }
 
 .btn:hover {
-  background: #e60000;
+  opacity: 0.8;
 }
 
 /* SECTION */
 .section {
-  padding: 60px 20px;
+  padding: 80px 20px;
   text-align: center;
 }
 
-.section h2 {
-  font-family: 'Playfair Display', serif;
-  margin-bottom: 20px;
-}
-
-/* MENU CARDS */
+/* MENU GRID */
 .menu {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-  flex-wrap: wrap;
 }
 
 .card {
-  width: 250px;
-  border-radius: 10px;
+  background: #1a1a1a;
+  border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
 }
 
 .card img {
@@ -128,18 +130,15 @@ nav ul li a:hover {
 
 .card h3 {
   margin: 10px;
-}
-
-.card p {
-  margin-bottom: 10px;
+  color: #ffcc70;
 }
 
 /* FOOTER */
 footer {
-  background: #111;
-  color: white;
+  background: black;
   padding: 20px;
   text-align: center;
+  color: #aaa;
 }
 </style>
 
@@ -147,58 +146,51 @@ footer {
 
 <body>
 
+<!-- NAVBAR -->
+<nav>
+  <div class="logo">Blue Berry's</div>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="menu.html">Menu</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
 <!-- HERO -->
 <div class="hero">
-  <div class="overlay">
-
-    <!-- NAVBAR -->
-    <nav>
-      <div class="logo">Blue Berry's</div>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="menu.html">Menu</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-
-    <!-- HERO CONTENT -->
-    <div class="hero-content">
-      <h1>The Vintage Restaurant</h1>
-      <p>Experience Fine Dining & Classic Ambience 🍷</p>
-      <a href="menu.html" class="btn">Explore Menu</a>
-    </div>
-
+  <div class="hero-content">
+    <h1>The Vintage Experience</h1>
+    <p>Luxury Dining • Timeless Taste 🍷</p>
+    <a href="menu.html" class="btn">Explore Menu</a>
   </div>
 </div>
 
 <!-- ABOUT -->
 <div class="section">
   <h2>About Us</h2>
-  <p>Blue Berry's offers a luxurious vintage dining experience with delicious multi-cuisine dishes.</p>
+  <p>We bring you a perfect blend of vintage ambience and modern cuisine.</p>
 </div>
 
-<!-- MENU PREVIEW -->
+<!-- MENU -->
 <div class="section">
   <h2>Popular Dishes</h2>
-
   <div class="menu">
+
     <div class="card">
       <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092">
       <h3>Pizza</h3>
-      <p>₹200</p>
     </div>
 
     <div class="card">
       <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0">
       <h3>Pasta</h3>
-      <p>₹180</p>
     </div>
 
     <div class="card">
       <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b">
       <h3>Mocktails</h3>
-      <p>₹120</p>
     </div>
+
   </div>
 </div>
 
